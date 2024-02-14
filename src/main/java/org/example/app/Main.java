@@ -7,7 +7,6 @@ import org.example.app.utils.Utils;
 public class Main {
     public static void main(String[] args) {
         int ax1 = 1, ay1 = 6, bx1 = 6, by1 = 2;
-
         int ax2 = 5, ay2 = 8, bx2 = 9, by2 = 1;
 
         System.out.println(Utils.intersectionType(new Rect(new Point(ax1, ay1), new Point(bx1, by1)), new Rect(new Point(ax2, ay2), new Point(bx2, by2))));
