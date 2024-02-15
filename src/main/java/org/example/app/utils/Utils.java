@@ -4,9 +4,9 @@ import org.example.app.models.IntersectionType;
 import org.example.app.models.Point;
 import org.example.app.models.Rect;
 
-public class Utils {
+public class Utils extends BaseUtils {
     private Utils() {
-        throw new IllegalStateException("Utils is not initialized");
+        super();
     }
 
     public static IntersectionType intersectionType(Rect rect1, Rect rect2) {
