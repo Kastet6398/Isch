@@ -8,7 +8,7 @@ public record Rect(Point a, Point b, Point leftTop, Point rightBottom) {
     public IntersectionType intersectionType(Rect rect2) {
         Point a2 = rect2.a, b2 = rect2.b;
 
-        if (a2.isAboveThan(b) || b2.isBelowThan(a) || a2.isRighterThan(b) || b2.isLefterThan(a)) {
+        if (a2.isBelowThan(b) || b2.isAboveThan(a) || a2.isRighterThan(b) || b2.isLefterThan(a)) {
             return IntersectionType.NONE;
         }
 
