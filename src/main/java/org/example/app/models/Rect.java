@@ -7,7 +7,7 @@ public record Rect(Point a, Point b, Point leftTop, Point rightBottom) {
 
     public IntersectionType intersectionType(Rect another) {
 
-        if (this.b.isAboveThan(another.a)   || this.a.isBelowThan(another.b)
+        if (this.b.isBelowThan(another.a)   || this.a.isAboveThan(another.b)
          || this.a.isRighterThan(another.b) || this.b.isLefterThan(another.a)) {
             return IntersectionType.NONE;
         }
