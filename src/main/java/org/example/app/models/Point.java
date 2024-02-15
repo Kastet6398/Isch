@@ -20,11 +20,11 @@ public record Point(int x, int y) {
     }
 
     public boolean isAboveThan(Point point) {
-        return y < point.y;
+        return y > point.y;
     }
 
     public boolean isBelowThan(Point point) {
-        return y > point.y;
+        return y < point.y;
     }
 
     public boolean isLefterThan(Point point) {
