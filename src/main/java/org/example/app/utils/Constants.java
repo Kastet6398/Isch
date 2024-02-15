@@ -11,7 +11,7 @@ public class Constants extends BaseUtils {
 /*
 Here's a canvas where you can draw the rectangles and visually check the output of the program.
 9                *---------B2
-8  *-------------XX--------|
+8  *-------------NN--------|
 7  |              |
 6  |              |
 5  |              |
@@ -21,7 +21,7 @@ Here's a canvas where you can draw the rectangles and visually check the output 
 1
 0  1  2  3  4  5  6  7  8  9
 
-XX=B1 AND A2
+NN=B1=A2
 
  */
 }
