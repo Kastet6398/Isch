@@ -9,7 +9,7 @@ public class Constants extends BaseUtils {
     public static final int ax2 = 5, ay2 = 8, bx2 = 9, by2 = 1;
 
 /*
-Here's a canvas where you can draw the rectangles and visuallyhttps://github.com/Kastet6398/Isch check the output of the program.
+Here's a canvas where you can draw the rectangles and visually check the output of the program.
 0  1  2  3  4  5  6  7  8  9
 1              *----------B2
 2  *-----------|-B1        |
