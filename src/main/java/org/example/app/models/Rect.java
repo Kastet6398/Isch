@@ -1,27 +1,27 @@
 package org.example.app.models;
 
-public record Rect(Point a, Point b, Point leftTop, Point rightBottom) {
+public record Rect(Point rightTop, Point leftBottom, Point leftTop, Point rightBottom) {
     public Rect(Point a, Point b) {
         this(a, b, new Point(a.x(), b.y()), new Point(b.x(), a.y()));
     }
 
     public IntersectionType intersectionType(Rect another) {
 
-        if (this.b.isBelowThan(another.a)   || this.a.isAboveThan(another.b)
-         || this.a.isRighterThan(another.b) || this.b.isLefterThan(another.a)) {
+        if (this.leftBottom.isAboveThan(another.rightTop)   || this.rightTop.isBelowThan(another.leftBottom)
+         || this.rightTop.isRighterThan(another.leftBottom) || this.leftBottom.isLefterThan(another.rightTop)) {
             return IntersectionType.NONE;
         }
 
-        if (this.a.equals(another.a)                 || this.b.equals(another.a)
+        if (this.rightTop.equals(another.rightTop)   || this.leftBottom.equals(another.rightTop)
          || this.leftTop.equals(another.rightBottom) || this.rightBottom.equals(another.leftTop)) {
             return IntersectionType.DOT;
         }
 
-        if (this.b.isSameHorizontal(another.a) || this.a.isSameHorizontal(another.b)) {
+        if (this.leftBottom.isSameHorizontal(another.rightTop) || this.rightTop.isSameHorizontal(another.leftBottom)) {
             return IntersectionType.VERTICAL;
         }
 
-        if (this.b.isSameVertical(another.a) || this.a.isSameVertical(another.b)) {
+        if (this.leftBottom.isSameVertical(another.rightTop) || this.rightTop.isSameVertical(another.leftBottom)) {
             return IntersectionType.HORIZONTAL;
         }
 
